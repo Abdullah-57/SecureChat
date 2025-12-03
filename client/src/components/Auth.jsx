@@ -16,7 +16,7 @@ function Auth({ onLogin }) {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setStatus("Generating Cryptographic Keys...");
+    setStatus("Now Generating Cryptographic Keys...");
 
     try {
       const { ecdhPair, rsaPair } = await generateIdentityKeys();
@@ -39,7 +39,7 @@ function Auth({ onLogin }) {
       
     } catch (error) {
       console.error(error);
-      setStatus("Error: Username taken or server issue.");
+      setStatus("Error:There is Username taken or server issue.");
     }
   };
 
@@ -56,7 +56,7 @@ function Auth({ onLogin }) {
       
       const privKey = await localforage.getItem(`priv_ecdh_${username}`);
       if (!privKey) {
-        setStatus("Warning: Private Keys not found on this device.");
+        setStatus("Warning: No Private Keys found on this device.");
         return;
       }
 
