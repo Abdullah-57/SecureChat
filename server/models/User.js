@@ -1,3 +1,5 @@
+// Added 2FA
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
