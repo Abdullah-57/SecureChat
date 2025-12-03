@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Auth from './components/Auth';
 import Chat from './components/Chat'; 
+// adding chat component
+// adding Auth component
 
 function App() {
   const [user, setUser] = useState(null);
@@ -63,7 +65,6 @@ function App() {
               Logout
             </button>
           </div>
-          
           {/* Status Bar */}
           <div style={{ 
             background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)', 
